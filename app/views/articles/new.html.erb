@@ -1,7 +1,12 @@
 <h1>New Article</h1>
 <a href=..>Home</a>
+<<<<<<< HEAD
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
 
+=======
+<%= form_with scope: :articles, url: articles_path, local: true do |form| %>
+  
+>>>>>>> c93a7315a24ec8c6e5e3f2db7de5138407a66dc1
   <p>
     <%= form.label :title %><br/>
     <%= form.text_field :title %>
@@ -11,7 +16,11 @@
     <%= form.label :text %><br/>
     <%= form.text_area :text %>
   </p>
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> c93a7315a24ec8c6e5e3f2db7de5138407a66dc1
   <p>
     <%= form.submit %>
   </p>
