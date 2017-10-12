@@ -15,12 +15,16 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params[article_params])
 
-    @article.save
+    if @article.save
+      render plain: "Good"
+    else
+      render plain: "Error"
+    end
     redirect_to @article
   end
 
   private
     def article_params
-      params.permit(:title, :text)
+      params.require(:article).permit(:title, :text)
     end
 end
