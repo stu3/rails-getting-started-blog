@@ -13,18 +13,7 @@
 </p>
 
 <h2>Comments</h2>
-<% @article.comments.each do |comment| %>
-
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-  <br/>
-  By:
-  <%= comment.commenter %>
-</p>
-
-
-<% end %>
+<%= render @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
